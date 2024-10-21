@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    text-decoration: none;
+}
+.wholenav{
+    display: flex;
+    background-color: #2b3c3c;
+    weight:100%;
+    height:40px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+#bt-nav{
+    width: 25px;
+    flex-shrink: 0;
+    font-size: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bar{
+    width: 100%;
+    background-color: #fff;
+    height: 3px;
+}
+.navbar{
+    display: flex;
+}
+.btn-mid{
+    flex-shrink: 0;
+    font-size: 14px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+.link{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    height: 100vh;
+    width: 250px;
+    background-color: #fff;  
+}
+.link a{
+    padding: 12px 75px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+.link-active,a:hover{
+    color: #fff;
+    background-color: red;
+}
+.link{
+    transform: translateX(-250px);
+    transition: .5s;
+}
+.open .link{
+    transform: translateX(0px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.open .overlay{
+    visibility: visible;
+    opacity: 1;
+}
